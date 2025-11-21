@@ -1,0 +1,12 @@
+[submodule "pack/tpope/start/vim-abolish"]
+	path = pack/tpope/start/vim-abolish
+	url = ../../tpope/vim-abolish.git
+[submodule "pack/tpope/start/vim-fugitive"]
+	path = pack/tpope/start/vim-fugitive
+	url = ../../tpope/vim-fugitive.git
+[submodule "pack/tpope/start/vim-surround"]
+	path = pack/tpope/start/vim-surround
+	url = ../../tpope/vim-surround.git
+[submodule "pack/thinca/start/vim-visualstar"]
+	path = pack/thinca/start/vim-visualstar
+	url = ../../thinca/vim-visualstar.git
