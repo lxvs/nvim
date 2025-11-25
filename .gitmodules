@@ -19,3 +19,6 @@
 [submodule "pack/nvim-telescope/start/telescope.nvim"]
 	path = pack/nvim-telescope/start/telescope.nvim
 	url = ../../nvim-telescope/telescope.nvim.git
+[submodule "pack/cocopon/start/iceberg.vim"]
+	path = pack/cocopon/start/iceberg.vim
+	url = ../../cocopon/iceberg.vim.git
