@@ -22,3 +22,6 @@
 [submodule "pack/cocopon/start/iceberg.vim"]
 	path = pack/cocopon/start/iceberg.vim
 	url = ../../cocopon/iceberg.vim.git
+[submodule "pack/itchyny/start/lightline.vim"]
+	path = pack/itchyny/start/lightline.vim
+	url = ../../itchyny/lightline.vim.git
