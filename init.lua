@@ -42,6 +42,11 @@ end
 
 vim.o.undofile = true
 
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*/.git/*',
+  command = 'setlocal noundofile'
+})
+
 -- Print the line number in front of each line
 vim.o.number = true
 
