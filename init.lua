@@ -122,11 +122,13 @@ vim.cmd('packadd! nohlsearch')
 
 vim.cmd('packadd! matchit')
 
-vim.api.nvim_create_autocmd('TermOpen', {command = "startinsert"})
-
 vim.keymap.set('c', '<C-a>', '<Home>')
 vim.keymap.set({'n', '!', 't'}, '<S-Insert>', function() vim.api.nvim_paste(vim.fn.getreg('+'), true, -1) end)
 
 require('buffer_switcher')
+require('ToggleTerm').setup {
+  open_mapping = '<C-q>',
+  direction = 'float',
+}
 
 -- vim: sw=2 sts=2
