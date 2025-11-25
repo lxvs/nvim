@@ -32,6 +32,8 @@ vim.o.autochdir = true
 vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 
+vim.o.jumpoptions = 'stack'
+
 if vim.fn.has('win32') then
   vim.o.shell = 'C:/PROGRA~1/Git/usr/bin/bash.exe -l'
   vim.o.shellcmdflag = '-c'
