@@ -3,19 +3,44 @@
 -- NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 
-vim.o.background = 'light'
-vim.g.lightline = {
-  colorscheme = 'iceberg',
-}
-vim.o.laststatus = 3
-vim.o.showmode = false
-vim.cmd [[colorscheme iceberg]]
-
 -- [[ Setting options ]] See `:h vim.o`
 -- NOTE: You can change these options as you wish!
 -- For more options, you can see `:help option-list`
 -- To see documentation for an option, you can use `:h 'optionname'`, for example `:h 'number'`
 -- (Note the single quotes)
+
+vim.o.title = true
+vim.o.background = 'light'
+vim.g.lightline = {
+  colorscheme = 'iceberg',
+  active = {
+    left = {
+      {'mode', 'paste'},
+      {'readonly', 'filename', 'branch', 'modified'}
+    }
+  },
+  component_function = {
+    branch = 'FugitiveHead'
+  }
+}
+vim.o.laststatus = 2
+vim.o.showmode = false
+vim.cmd.colorscheme('iceberg')
+
+vim.o.autochdir = true
+
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
+
+if vim.fn.has('win32') then
+  vim.o.shell = 'C:/PROGRA~1/Git/usr/bin/bash.exe -l'
+  vim.o.shellcmdflag = '-c'
+  vim.o.shellquote = ''
+  vim.o.shellxquote = ''
+  vim.o.shellslash = true
+end
+
+vim.o.undofile = true
 
 -- Print the line number in front of each line
 vim.o.number = true
@@ -53,7 +78,7 @@ vim.o.confirm = true
 -- [[ Set up keymaps ]] See `:h vim.keymap.set()`, `:h mapping`, `:h keycodes`
 
 -- Use <Esc> to exit terminal mode
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+--vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
 -- Map <A-j>, <A-k>, <A-h>, <A-l> to navigate between windows in any modes
 vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-n><C-w>h')
@@ -94,3 +119,14 @@ end, { desc = 'Print the git blame for the current line' })
 -- For example, to add the "nohlsearch" package to automatically turn off search highlighting after
 -- 'updatetime' and when going to insert mode
 vim.cmd('packadd! nohlsearch')
+
+vim.cmd('packadd! matchit')
+
+vim.api.nvim_create_autocmd('TermOpen', {command = "startinsert"})
+
+vim.keymap.set('c', '<C-a>', '<Home>')
+vim.keymap.set({'n', '!', 't'}, '<S-Insert>', function() vim.api.nvim_paste(vim.fn.getreg('+'), true, -1) end)
+
+require('buffer_switcher')
+
+-- vim: sw=2 sts=2
