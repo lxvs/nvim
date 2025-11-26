@@ -10,9 +10,11 @@
 [submodule "pack/thinca/start/vim-visualstar"]
 	path = pack/thinca/start/vim-visualstar
 	url = ../../thinca/vim-visualstar.git
+	ignore = untracked
 [submodule "pack/akinsho/start/toggleterm.nvim"]
 	path = pack/akinsho/start/toggleterm.nvim
 	url = ../../akinsho/toggleterm.nvim.git
+	ignore = untracked
 [submodule "pack/nvim-lua/start/plenary.nvim"]
 	path = pack/nvim-lua/start/plenary.nvim
 	url = ../../nvim-lua/plenary.nvim.git
