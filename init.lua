@@ -14,23 +14,9 @@ vim.o.background = 'light'
 vim.o.laststatus = 2
 vim.o.showmode = false
 vim.cmd.colorscheme('iceberg')
-vim.g.lightline = {
-  colorscheme = 'iceberg',
-  active = {
-    left = {
-      {'mode', 'paste'},
-      {'readonly', 'filename', 'branch', 'modified'},
-    },
-  },
-  component_function = {
-    branch = 'FugitiveHead',
-  },
-}
 vim.o.laststatus = 2
 vim.o.showmode = false
 vim.cmd.colorscheme('iceberg')
-vim.api.nvim_set_hl(0, "StatusLine", {reverse = false})
-vim.api.nvim_set_hl(0, "StatusLineNC", {reverse = false})
 
 vim.o.autochdir = true
 
@@ -216,5 +202,7 @@ require('gitsigns').setup {
     map({'o', 'x'}, 'ih', gitsigns.select_hunk)
   end
 }
+
+require('lualine').setup {}
 
 -- vim: sw=2 sts=2

@@ -24,12 +24,12 @@
 [submodule "pack/cocopon/start/iceberg.vim"]
 	path = pack/cocopon/start/iceberg.vim
 	url = ../../cocopon/iceberg.vim.git
-[submodule "pack/itchyny/start/lightline.vim"]
-	path = pack/itchyny/start/lightline.vim
-	url = ../../itchyny/lightline.vim.git
 [submodule "pack/lewis6991/start/gitsigns.nvim"]
 	path = pack/lewis6991/start/gitsigns.nvim
 	url = ../../lewis6991/gitsigns.nvim.git
 [submodule "pack/tpope/start/vim-commentary"]
 	path = pack/tpope/start/vim-commentary
 	url = ../../tpope/vim-commentary.git
+[submodule "pack/nvim-lualine/start/lualine.nvim"]
+	path = pack/nvim-lualine/start/lualine.nvim
+	url = ../../nvim-lualine/lualine.nvim.git
