@@ -27,3 +27,6 @@
 [submodule "pack/itchyny/start/lightline.vim"]
 	path = pack/itchyny/start/lightline.vim
 	url = ../../itchyny/lightline.vim.git
+[submodule "pack/lewis6991/start/gitsigns.nvim"]
+	path = pack/lewis6991/start/gitsigns.nvim
+	url = ../../lewis6991/gitsigns.nvim.git
