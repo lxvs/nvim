@@ -25,8 +25,8 @@ vim.o.softtabstop = 4
 
 vim.o.jumpoptions = 'stack'
 
-if vim.fn.has('win32') then
-  vim.o.shell = 'C:/PROGRA~1/Git/usr/bin/bash.exe -l'
+if vim.fn.has('win32') == 1 then
+  vim.o.shell = 'C:/PROGRA~1/Git/usr/bin/bash.exe'
   vim.o.shellcmdflag = '-c'
   vim.o.shellquote = ''
   vim.o.shellxquote = ''
@@ -95,12 +95,14 @@ vim.keymap.set({ 'n' }, '<A-l>', '<C-w>l')
 
 -- Highlight when yanking (copying) text.
 -- Try it with `yap` in normal mode. See `:h vim.hl.on_yank()`
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  callback = function()
-    vim.hl.on_yank()
-  end,
-})
+if vim.hl ~= nil and vim.hl.on_yank ~= nil then
+  vim.api.nvim_create_autocmd('TextYankPost', {
+    desc = 'Highlight when yanking (copying) text',
+    callback = function()
+      vim.hl.on_yank()
+    end,
+  })
+end
 
 -- [[ Create user commands ]]
 -- See `:h nvim_create_user_command()` and `:h user-commands`
@@ -118,15 +120,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- For example, to add the "nohlsearch" package to automatically turn off search highlighting after
 -- 'updatetime' and when going to insert mode
-vim.cmd('packadd! nohlsearch')
+vim.cmd('silent! packadd! nohlsearch')
 
-vim.cmd('packadd! matchit')
+vim.cmd('silent! packadd! matchit')
 
 vim.keymap.set('c', '<C-a>', '<Home>')
 vim.keymap.set({'n', '!', 't'}, '<S-Insert>', function() vim.api.nvim_paste(vim.fn.getreg('+'), true, -1) end)
 
 require('buffer_switcher')
-require('ToggleTerm').setup {
+require('toggleterm').setup {
   open_mapping = '<C-q>',
   direction = 'float',
 }
