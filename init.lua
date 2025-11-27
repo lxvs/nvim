@@ -14,9 +14,6 @@ vim.o.background = 'light'
 vim.o.laststatus = 2
 vim.o.showmode = false
 vim.cmd.colorscheme('iceberg')
-vim.o.laststatus = 2
-vim.o.showmode = false
-vim.cmd.colorscheme('iceberg')
 
 vim.o.autochdir = true
 
