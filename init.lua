@@ -31,6 +31,7 @@ if vim.fn.has('win32') == 1 then
   vim.o.shellquote = ''
   vim.o.shellxquote = ''
   vim.o.shellslash = true
+  vim.env.PATH = vim.env.USERPROFILE .. '/bin;/mingw64/bin;/usr/local/bin;/usr/bin;/bin;' .. vim.env.PATH
 end
 
 vim.o.undofile = true
