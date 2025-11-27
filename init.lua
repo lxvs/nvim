@@ -128,6 +128,10 @@ vim.keymap.set('c', '<C-a>', '<Home>')
 vim.keymap.set({'n', '!', 't'}, '<S-Insert>', function() vim.api.nvim_paste(vim.fn.getreg('+'), true, -1) end)
 
 require('buffer_switcher')
+
+-- <C-i> won't work after mapping <Tab>
+vim.keymap.set('n', '<C-l>', '<C-i>')
+
 require('toggleterm').setup {
   open_mapping = '<C-q>',
   direction = 'float',
