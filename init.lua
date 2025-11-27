@@ -207,4 +207,12 @@ require('gitsigns').setup {
 
 require('lualine').setup {}
 
+if vim.fn.has('win32') == 1 then
+  vim.lsp.config('bashls', {
+    cmd = {'bash-language-server.cmd', 'start' },
+  })
+end
+
+vim.lsp.enable('bashls')
+
 -- vim: sw=2 sts=2
