@@ -215,4 +215,9 @@ end
 
 vim.lsp.enable('bashls')
 
+require('trouble').setup {}
+
+vim.keymap.set('n', '<leader>xx', '<cmd>Trouble diagnostics toggle<CR>')
+vim.keymap.set('n', '<leader>xX', '<cmd>Trouble diagnostics toggle filter.buf=0<CR>')
+
 -- vim: sw=2 sts=2

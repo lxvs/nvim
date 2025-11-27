@@ -36,3 +36,6 @@
 [submodule "pack/neovim/start/nvim-lspconfig"]
 	path = pack/neovim/start/nvim-lspconfig
 	url = ../../neovim/nvim-lspconfig.git
+[submodule "pack/folke/start/trouble.nvim"]
+	path = pack/folke/start/trouble.nvim
+	url = ../../folke/trouble.nvim.git
