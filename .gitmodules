@@ -39,3 +39,6 @@
 [submodule "pack/folke/start/trouble.nvim"]
 	path = pack/folke/start/trouble.nvim
 	url = ../../folke/trouble.nvim.git
+[submodule "pack/nvim-treesitter/start/nvim-treesitter"]
+	path = pack/nvim-treesitter/start/nvim-treesitter
+	url = ../../nvim-treesitter/nvim-treesitter.git

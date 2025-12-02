@@ -233,4 +233,14 @@ if vim.fn.has('nvim-0.11.0') == 1 then
   vim.lsp.enable('bashls')
 end
 
+require('nvim-treesitter.configs').setup {
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+  indent = {
+    enable = true,
+  },
+}
+
 -- vim: sw=2 sts=2
