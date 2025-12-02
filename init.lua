@@ -217,17 +217,20 @@ vim.keymap.set('n', '<leader>gs', '<cmd>Git status<CR>')
 
 require('lualine').setup {}
 
-if vim.fn.has('win32') == 1 then
-  vim.lsp.config('bashls', {
-    cmd = {'bash-language-server.cmd', 'start' },
-  })
-end
-
-vim.lsp.enable('bashls')
-
 require('trouble').setup {}
 
 vim.keymap.set('n', '<leader>xx', '<cmd>Trouble diagnostics toggle<CR>')
 vim.keymap.set('n', '<leader>xX', '<cmd>Trouble diagnostics toggle filter.buf=0<CR>')
+
+if vim.fn.has('nvim-0.11.0') == 1 then
+  vim.cmd('packadd! nvim-lspconfig')
+  if vim.fn.has('win32') == 1 then
+    vim.lsp.config('bashls', {
+      cmd = {'bash-language-server.cmd', 'start' },
+    })
+  end
+
+  vim.lsp.enable('bashls')
+end
 
 -- vim: sw=2 sts=2

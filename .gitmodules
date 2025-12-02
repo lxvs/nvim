@@ -34,7 +34,7 @@
 	path = pack/nvim-lualine/start/lualine.nvim
 	url = ../../nvim-lualine/lualine.nvim.git
 [submodule "pack/neovim/start/nvim-lspconfig"]
-	path = pack/neovim/start/nvim-lspconfig
+	path = pack/neovim/opt/nvim-lspconfig
 	url = ../../neovim/nvim-lspconfig.git
 [submodule "pack/folke/start/trouble.nvim"]
 	path = pack/folke/start/trouble.nvim
