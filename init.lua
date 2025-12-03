@@ -126,7 +126,8 @@ vim.cmd('silent! packadd! nohlsearch')
 vim.cmd('silent! packadd! matchit')
 
 vim.keymap.set('c', '<C-a>', '<Home>')
-vim.keymap.set({'n', '!', 't'}, '<S-Insert>', function() vim.api.nvim_paste(vim.fn.getreg('+'), true, -1) end)
+vim.keymap.set({'v'}, '<C-Insert>', '"*y')
+vim.keymap.set({'n', '!', 't', 'v'}, '<S-Insert>', function() vim.api.nvim_paste(vim.fn.getreg('+'), true, -1) end)
 
 require('buffer_switcher')
 
