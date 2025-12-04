@@ -91,6 +91,11 @@ vim.keymap.set({ 'n' }, '<A-j>', '<C-w>j')
 vim.keymap.set({ 'n' }, '<A-k>', '<C-w>k')
 vim.keymap.set({ 'n' }, '<A-l>', '<C-w>l')
 
+vim.keymap.set({ 'n', 'v' }, 'j', 'gj')
+vim.keymap.set({ 'n', 'v' }, 'k', 'gk')
+vim.keymap.set({ 'n', 'v' }, 'gj', 'j')
+vim.keymap.set({ 'n', 'v' }, 'gk', 'k')
+
 -- [[ Basic Autocommands ]].
 -- See `:h lua-guide-autocommands`, `:h autocmd`, `:h nvim_create_autocmd()`
 
