@@ -42,3 +42,6 @@
 [submodule "pack/nvim-treesitter/start/nvim-treesitter"]
 	path = pack/nvim-treesitter/start/nvim-treesitter
 	url = ../../nvim-treesitter/nvim-treesitter.git
+[submodule "pack/inkarkat/start/vim-ReplaceWithRegister"]
+	path = pack/inkarkat/start/vim-ReplaceWithRegister
+	url = ../../inkarkat/vim-ReplaceWithRegister.git
