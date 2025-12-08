@@ -27,6 +27,7 @@
 [submodule "pack/lewis6991/start/gitsigns.nvim"]
 	path = pack/lewis6991/start/gitsigns.nvim
 	url = ../../lewis6991/gitsigns.nvim.git
+	branch = main
 [submodule "pack/tpope/start/vim-commentary"]
 	path = pack/tpope/start/vim-commentary
 	url = ../../tpope/vim-commentary.git
