@@ -97,8 +97,8 @@ vim.keymap.set({ 'n', 'v' }, 'gj', 'j')
 vim.keymap.set({ 'n', 'v' }, 'gk', 'k')
 
 -- vim-ReplaceWithRegister
-vim.keymap.del({"n", 'v'}, "gra")
-vim.keymap.del("n", "gri")
+if vim.fn.mapcheck('gra', 'nv') ~= '' then vim.keymap.del({"n", 'v'}, "gra") end
+if vim.fn.mapcheck('gri', 'n') ~= '' then vim.keymap.del("n", "gri") end
 
 -- [[ Basic Autocommands ]].
 -- See `:h lua-guide-autocommands`, `:h autocmd`, `:h nvim_create_autocmd()`
