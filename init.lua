@@ -235,12 +235,12 @@ vim.keymap.set('n', '<leader>xX', '<cmd>Trouble diagnostics toggle filter.buf=0<
 if vim.fn.has('nvim-0.11.0') == 1 then
   vim.cmd('packadd! nvim-lspconfig')
   if vim.fn.has('win32') == 1 then
-    vim.lsp.config('bashls', {
-      cmd = {'bash-language-server.cmd', 'start' },
-    })
+    vim.lsp.config('bashls', {cmd = {'bash-language-server.cmd', 'start' }})
+    vim.lsp.config('pyright',{cmd = {'pyright-langserver.cmd', '--stdio'}})
   end
 
   vim.lsp.enable('bashls')
+  vim.lsp.enable('pyright')
 end
 
 require('nvim-treesitter.configs').setup {
