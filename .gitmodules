@@ -46,3 +46,24 @@
 [submodule "pack/inkarkat/start/vim-ReplaceWithRegister"]
 	path = pack/inkarkat/start/vim-ReplaceWithRegister
 	url = ../../inkarkat/vim-ReplaceWithRegister.git
+[submodule "pack/hrsh7th/start/cmp-nvim-lsp"]
+	path = pack/hrsh7th/start/cmp-nvim-lsp
+	url = ../../hrsh7th/cmp-nvim-lsp.git
+[submodule "pack/hrsh7th/start/cmp-buffer"]
+	path = pack/hrsh7th/start/cmp-buffer
+	url = ../../hrsh7th/cmp-buffer.git
+[submodule "pack/hrsh7th/start/cmp-path"]
+	path = pack/hrsh7th/start/cmp-path
+	url = ../../hrsh7th/cmp-path.git
+[submodule "pack/hrsh7th/start/cmp-cmdline"]
+	path = pack/hrsh7th/start/cmp-cmdline
+	url = ../../hrsh7th/cmp-cmdline.git
+[submodule "pack/hrsh7th/start/nvim-cmp"]
+	path = pack/hrsh7th/start/nvim-cmp
+	url = ../../hrsh7th/nvim-cmp.git
+[submodule "pack/hrsh7th/start/cmp-vsnip"]
+	path = pack/hrsh7th/start/cmp-vsnip
+	url = ../../hrsh7th/cmp-vsnip.git
+[submodule "pack/hrsh7th/start/vim-vsnip"]
+	path = pack/hrsh7th/start/vim-vsnip
+	url = ../../hrsh7th/vim-vsnip.git
