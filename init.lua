@@ -147,7 +147,8 @@ vim.keymap.set('c', '<C-a>', '<Home>')
 vim.keymap.set({'v'}, '<C-Insert>', '"*y')
 vim.keymap.set({'n', '!', 't', 'v'}, '<S-Insert>', function() vim.api.nvim_paste(vim.fn.getreg('+'), true, -1) end)
 
-require('buffer_switcher')
+vim.keymap.set({'n', 'v'}, '<Tab>', '<cmd>bnext<CR>', {silent = true})
+vim.keymap.set({'n', 'v'}, '<S-Tab>', '<cmd>bprevious<CR>', {silent = true})
 
 -- <C-i> won't work after mapping <Tab>
 vim.keymap.set('n', '<C-l>', '<C-i>')
