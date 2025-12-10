@@ -145,6 +145,7 @@ vim.cmd('silent! packadd! matchit')
 
 vim.keymap.set('c', '<C-a>', '<Home>')
 vim.keymap.set({'v'}, '<C-Insert>', '"*y')
+vim.keymap.set({'v'}, '<C-C>', '"*y')
 vim.keymap.set({'n', '!', 't', 'v'}, '<S-Insert>', function() vim.api.nvim_paste(vim.fn.getreg('+'), true, -1) end)
 
 vim.keymap.set({'n', 'v'}, '<Tab>', '<cmd>bnext<CR>', {silent = true})
