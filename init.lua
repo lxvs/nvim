@@ -114,6 +114,15 @@ if vim.hl ~= nil and vim.hl.on_yank ~= nil then
   })
 end
 
+-- press q or Enter to close quickfix
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'qf',
+  callback = function()
+    vim.keymap.set('n', 'q', '<cmd>cclose<CR>', {buffer = true})
+    vim.keymap.set('n', '<CR>', '<CR><cmd>cclose<CR>', {buffer = true})
+  end
+})
+
 -- [[ Create user commands ]]
 -- See `:h nvim_create_user_command()` and `:h user-commands`
 
