@@ -21,6 +21,7 @@
 [submodule "pack/nvim-telescope/start/telescope.nvim"]
 	path = pack/nvim-telescope/start/telescope.nvim
 	url = ../../nvim-telescope/telescope.nvim.git
+	branch = master
 [submodule "pack/cocopon/start/iceberg.vim"]
 	path = pack/cocopon/start/iceberg.vim
 	url = ../../cocopon/iceberg.vim.git
@@ -43,6 +44,7 @@
 [submodule "pack/nvim-treesitter/start/nvim-treesitter"]
 	path = pack/nvim-treesitter/start/nvim-treesitter
 	url = ../../nvim-treesitter/nvim-treesitter.git
+	branch = master
 [submodule "pack/inkarkat/start/vim-ReplaceWithRegister"]
 	path = pack/inkarkat/start/vim-ReplaceWithRegister
 	url = ../../inkarkat/vim-ReplaceWithRegister.git
