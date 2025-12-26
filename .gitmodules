@@ -69,3 +69,6 @@
 [submodule "pack/hrsh7th/start/vim-vsnip"]
 	path = pack/hrsh7th/start/vim-vsnip
 	url = ../../hrsh7th/vim-vsnip.git
+[submodule "pack/windwp/start/nvim-ts-autotag"]
+	path = pack/windwp/start/nvim-ts-autotag
+	url = ../../windwp/nvim-ts-autotag.git
