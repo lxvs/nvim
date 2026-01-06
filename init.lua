@@ -99,6 +99,7 @@ vim.keymap.set({ 'n', 'v' }, 'gk', 'k')
 -- vim-ReplaceWithRegister
 if vim.fn.mapcheck('gra', 'nv') ~= '' then vim.keymap.del({"n", 'v'}, "gra") end
 if vim.fn.mapcheck('gri', 'n') ~= '' then vim.keymap.del("n", "gri") end
+if vim.fn.mapcheck('grt', 'n') ~= '' then vim.keymap.del("n", "grt") end
 
 -- [[ Basic Autocommands ]].
 -- See `:h lua-guide-autocommands`, `:h autocmd`, `:h nvim_create_autocmd()`
@@ -321,6 +322,7 @@ if vim.fn.has('nvim-0.11.0') == 1 then
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
   vim.keymap.set('n', 'ge', vim.lsp.buf.references)
+  vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition)
 end
 
 require('nvim-ts-autotag').setup {
