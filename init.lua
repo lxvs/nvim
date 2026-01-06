@@ -232,6 +232,7 @@ require('gitsigns').setup {
   end
 }
 
+vim.keymap.set('n', '<leader>hB', '<cmd>Git blame<CR>')
 vim.keymap.set('n', '<leader>gc', '<cmd>Git commit --verbose<CR>')
 vim.keymap.set('n', '<leader>gC', '<cmd>Git commit --verbose --all<CR>')
 vim.keymap.set('n', '<leader>ga', '<cmd>Git commit --verbose --amend<CR>')
