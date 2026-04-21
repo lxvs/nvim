@@ -19,7 +19,7 @@
 	path = pack/nvim-lua/start/plenary.nvim
 	url = ../../nvim-lua/plenary.nvim.git
 [submodule "pack/nvim-telescope/start/telescope.nvim"]
-	path = pack/nvim-telescope/start/telescope.nvim
+	path = pack/nvim-telescope/opt/telescope.nvim
 	url = ../../nvim-telescope/telescope.nvim.git
 	branch = master
 [submodule "pack/cocopon/start/iceberg.vim"]

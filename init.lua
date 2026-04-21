@@ -160,12 +160,6 @@ require('toggleterm').setup {
   direction = 'float',
 }
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-
 require('gitsigns').setup {
   on_attach = function(bufnr)
     local gitsigns = require('gitsigns')
@@ -306,6 +300,13 @@ do -- nvim-cmp
 end
 
 if vim.fn.has('nvim-0.11.0') == 1 then
+  vim.cmd('packadd! telescope.nvim')
+  local builtin = require('telescope.builtin')
+  vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+  vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+  vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+  vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
   vim.cmd('packadd! nvim-lspconfig')
   if vim.fn.has('win32') == 1 then
     vim.lsp.config('bashls', {cmd = {'bash-language-server.cmd', 'start' }})
