@@ -241,7 +241,9 @@ require('trouble').setup {}
 vim.keymap.set('n', '<leader>xx', '<cmd>Trouble diagnostics toggle<CR>')
 vim.keymap.set('n', '<leader>xX', '<cmd>Trouble diagnostics toggle filter.buf=0<CR>')
 
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter').setup {
+  -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+  install_dir = vim.fn.stdpath('data') .. '/site',
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
